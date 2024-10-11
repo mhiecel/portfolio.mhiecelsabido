@@ -1,0 +1,178 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.navbar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: sticky;
+    top: 0;
+}
+
+.navbar ul{
+    display: flex;
+    list-style: none;
+    margin: 20px 0px;
+}
+
+.navbar ul li{
+    font-family: century;
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+.navbar ul li a{ 
+    text-decoration: none;
+    color: blanchedalmond;
+    padding: 8px 25px;
+    transition: all .5s ease;
+}
+
+.navbar ul li a:hover{
+    background-color: blanchedalmond;
+    color: black;
+    box-shadow: 0 0 10px white;
+}
+
+#home{
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.5);
+    height: 840px;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+#home::before{
+    content:"" ;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: url(img/bora-bora-french-polynesia-sunset-ocean.jpg) no-repeat center center/cover;
+    height: 900px;
+    width: 100%;
+    z-index: -1;
+    opacity: .8;
+}
+
+.main{
+    display: flex;
+    flex-direction: column;
+    align-items: right;
+    position: absolute;
+    top: 30%;
+    right: 30%;
+}
+
+.headings{
+    font-family: century;
+    font-size: 3rem;
+    text-align: center;
+    margin: 40px 0px;
+}
+
+.toggle-button{
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+    cursor: pointer;
+}
+
+.bar{
+    height: 3px;
+    width: 100%;
+    background-color: aliceblue;
+    border-radius: 10px;
+}
+
+@media (max-width: 768%) {
+    .toggle-button{
+        display: flex;
+    }
+}
+    .navbar-links ul{
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+    }
+    .navbar links ul li{
+        padding: 15px 0;
+    }
+    .navbar-links active{
+        display: flex;
+    }
+
+section{
+    padding: 50px 0;
+}
+h1{
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+p{
+    font-size: 1.2rem;
+}
+
+#about{
+    padding: 50px 20px;
+    background-color: aqua;
+}
+
+#hobbies{
+    padding: 50px 20px;
+    background-color: aqua;
+}
+
+#gallery{
+    padding: 50px 20px;
+    background-color: aqua;
+}
+
+.container{
+    max-width: 1200px;
+    margin: auto;
+    text-align: center;
+}
+
+.gallery-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.gallery-item{
+    overflow: hidden;
+    position: relative;
+}
+
+.gallery-item img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease, filter 0.3s ease;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.gallery-item:hover img{
+    transform: scale(1.1);
+    filter:brightness(80%);
+}
+
+@media (max-width: 768px) {
+    .gallery-grid{
+        grid-template-columns: 1fr;
+    }
+}
+
+#contact{
+    padding: 50px 20px;
+    background-color: aquamarine;
+}
